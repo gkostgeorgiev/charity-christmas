@@ -1,0 +1,18 @@
+<section class="search">
+    <h1>Search</h1>
+
+    <form class="search-form" action="/search" method="post">
+        <input type="text" class="search-title" name="search1" placeholder="Search Title...">
+        <input type="text" class="search-charity" name="search2" placeholder="Search Charity...">
+        <button type="submit" class="btn-search">Search</button>
+    </form>
+    <!--If there are matches after search-->
+    <div class="search-result">
+        <div class="search-list">
+            {{#each toys}}
+            {{>searchPartial }}
+            {{/each}}
+        </div>
+
+    </div>
+</section>
